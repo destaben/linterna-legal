@@ -1,0 +1,10 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>Authorization complete</title><style>body{font:16px/1.6 system-ui,sans-serif;max-width:720px;margin:2rem auto;padding:0 1rem;color:#222}code{word-break:break-all;background:#eee;padding:.2rem .4rem}</style></head><body>
+<h1>Authorization complete / Autorización completada</h1>
+<p>Copy the code below into the terminal (<code>tale-loom tiktok-exchange-code --code ...</code>). It is shown only in your browser and is not sent anywhere. / Copia el código en la terminal. Se muestra solo en tu navegador y no se envía a ningún sitio.</p>
+<p><strong>code:</strong> <code id="c">(none)</code></p>
+<p id="e"></p>
+<script>
+var p=new URLSearchParams(location.search);
+if(p.get("code"))document.getElementById("c").textContent=p.get("code");
+if(p.get("error"))document.getElementById("e").textContent="error: "+p.get("error")+" "+(p.get("error_description")||"");
+</script></body></html>
